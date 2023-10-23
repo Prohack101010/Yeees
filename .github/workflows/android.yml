@@ -7,6 +7,15 @@ on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches: [ master ]
+# This is a basic workflow to help you get started with Actions
+
+name: Android Build
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
@@ -59,7 +68,6 @@ jobs:
           haxelib git flixel-addons https://github.com/ninjamuffin99/flixel-addons
           haxelib git linc_luajit https://github.com/Sirox228/linc_luajit.git
           haxelib list
-
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
 
